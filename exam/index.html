@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harshdeep">
+    <title>Raretech Exam (New)</title>
+  <link rel="shortcut icon" href="../hdlogonew.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/login-styles.css">
+    <link rel="stylesheet" href="./assets/css/choose.css">
+    <link rel="stylesheet" href="./assets/css/rules.css">
+    <link rel="stylesheet" href="./assets/css/typing.css">
+
+
+    <style>
+        .question-block {
+            height: 312px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            /* background: #f5f5f5 image(); */
+            background: url(assets/back.png) #f5f5f5;
+        }
+
+        .SelectExam {
+            display: none;
+        }
+
+        .typing {
+            height: 100%;
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .Exam {
+            display: none;
+        }
+
+        .typing .header {
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="author" style="text-align: center; display: none;">Made By Harsh</p>
+    <div id="main">
+        <div class="login-container">
+            <div class="header">
+                <img src="./assets/rare.png" height="50" alt="Logo">
+                <h1>Raretech Exam Login</h1>
+            </div>
+            <div class="login-box">
+                <h2>Login</h2>
+                <span>use id and password as 1 and 1</span>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="userId">User ID</label>
+                        <input type="text" id="rollNo" name="userId" placeholder="Enter your User ID" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="SelectExam" id="select-exam-section">
+            <div class="header">
+                <img src="./assets/rare.png" height="50" alt="Logo">
+                <h1>Raretech Exam Type</h1>
+            </div>
+            <div class="exam-options">
+                <div class="exam-card">
+                    <h2>Basic</h2>
+                    <p>A simple exam to test general knowledge and basic skills of computer.</p>
+                    <a href="#basic-exam" class="btn-select" data-exam="basic">Start Basic Exam</a>
+                </div>
+                <div class="exam-card">
+                    <h2>Accounts</h2>
+                    <p>An exam focused on accounting principles and financial management.</p>
+                    <a href="#accounts-exam" class="btn-select" data-exam="accounts">Start Accounts Exam</a>
+                </div>
+                <div class="exam-card">
+                    <h2>Coding</h2>
+                    <p>An exam designed to test your programming skills and problem-solving ability.</p>
+                    <a href="#coding-exam" class="btn-select" data-exam="coding">Start Coding Exam</a>
+                </div>
+            </div>
+        </div>
+        <div class="rules">
+            <div class="header">
+                <img src="./assets/rare.png" height="50" alt="Logo">
+                <h1>Raretech Exam Rules</h1>
+            </div>
+            <div class="rules-container">
+                <ul class="rules-list">
+                    <li>
+                        <span class="rule-icon">🕒</span>
+                        Ensure that you have a stable internet connection throughout the exam.
+                    </li>
+                    <li>
+                        <span class="rule-icon">⏳</span>
+                        The exam duration is fixed, and the timer will not stop once the exam starts.
+                    </li>
+                    <li>
+                        <span class="rule-icon">🚫</span>
+                        Do not navigate away from the exam window or your session may be terminated.
+                    </li>
+                    <li>
+                        <span class="rule-icon">⚠️</span>
+                        Any form of cheating or unauthorized materials will result in disqualification.
+                    </li>
+                    <li>
+                        <span class="rule-icon">✍️</span>
+                        Answer all questions to the best of your ability. Unanswered questions will receive zero marks.
+                    </li>
+                    <li>
+                        <span class="rule-icon">🔍</span>
+                        You can mark questions for review and revisit them before submitting the exam.
+                    </li>
+                    <li>
+                        <span class="rule-icon">📅</span>
+                        Ensure that you submit your exam before the time runs out to avoid automatic submission.
+                    </li>
+                    <li>
+                        <span class="rule-icon">🤐</span>
+                        Respect the exam environment: no talking or interaction with other examinees during the test.
+                    </li>
+                    <li>
+                        <span class="rule-icon">💡</span>
+                        Read each question carefully and manage your time wisely.
+                    </li>
+                    <li>
+                        <span class="rule-icon">📞</span>
+                        For any technical issues, contact the exam supervisor immediately.
+                    </li>
+                </ul>
+                <button id="proceedBtn" class="btn-proceed">Proceed to Exam</button>
+            </div>
+        </div>
+        <div class="typing">
+            <header>
+                <div class="header-left">
+                    <div class="logo">
+                        <img height="60" src="./assets/rare.png" alt="logo">
+                    </div>
+                    <div class="Titles">
+                        <h2>Raretech Exam</h2>
+                        <p>Raretech Basic Exam -2024</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <img class="userImg" id="userImg" src="/assets/rare.png" alt="User Profile">
+                        <div class="details">
+                            <span>Name: <p class="userName" id="userName"></p></span>
+                            <span>RollNo: <p class="rollNumber" id="rollNumber"></p></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="wrapper">
+                <div class="content-box">
+                    <div class="typing-text">
+                        <p></p>
+                    </div>
+                    <div class="content">
+                        <ul class="result-details">
+                            <li class="time">
+                                <p>Time Left:</p>
+                                <span><b>05:00</b>min</span>
+                            </li>
+                            <li class="wpm">
+                                <p>WPM:</p>
+                                <span>0</span>
+                            </li>
+                        </ul>
+                        <button style="display: none;" id="stexam" class="showExam">Next</button>
+                    </div>
+                </div>
+                <textarea name="input-field" placeholder="Click here to type..." class="input-field"></textarea>
+            </div>
+        </div>
+        <div class="Exam">
+            <header>
+                <div class="header-left">
+                    <div class="logo">
+                        <img height="60" src="./assets/rare.png" alt="logo">
+                    </div>
+                    <div class="Titles">
+                        <h2>Raretech Exam</h2>
+                        <p>Raretech Basic Exam -2024</p>
+                    </div>
+                </div>
+                <p>An ISO 9001:2015 Certified Institute</p>
+                <div class="header-right">
+                    <div class="user-info">
+                        <img class="userImg" id="userImg" src="./assets/rare.png" alt="User Profile">
+                        <div class="details">
+                            <span>Name: <p class="userName" id="userName"></p></span>
+                            <span>RollNo: <p class="rollNumber" id="rollNumber"></p></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Navigation Tabs -->
+            <nav class="nav-tabs" id="nav-tabs">
+                <!-- <button class="tab active">Computer Fundamental</button>
+                <button class="tab ">Word</button>
+                <button class="tab ">Excel</button> -->
+
+            </nav>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="question-section" id="question-container">
+                    <h3 id="Question">1. What is the Question here?</h3>
+                    <form>
+                        <label><input type="radio" name="answer" value="51">Options will appear here</label><br>
+                        <label><input type="radio" name="answer" value="64">Options will appear here</label><br>
+                        <label><input type="radio" name="answer" value="60">Options will appear here</label><br>
+                        <label><input type="radio" name="answer" value="61">Options will appear here</label><br>
+                    </form>
+                    <div class="actions">
+                        <button id="pre" class="btn-review">Previous</button>
+                        <button id="nex" class="btn-review">Next</button>
+                    </div>
+                </div>
+                <div class="timePlease">01:00h</div>
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="question-status">
+                        <p><span class="status answered"></span> Answered</p>
+                        <p><span class="status not-answered"></span> Not Answered</p>
+                    </div>
+                    <div class="question-navigation">
+                        <div class="question-number status">1</div>
+                    </div>
+                    <button class="btn-submit" id="SubmitButton">Submit</button>
+                </aside>
+            </div>
+
+            
+        </div>
+        <div class="result-container" style="display: none;">
+            <div class="result-header">
+                <img src="userimage.jpg" alt="User Image" id="userImage"> <!-- Replace with user's actual image -->
+                <div class="info">
+                    <h1 id="userName">Harsh Kumar</h1> <!-- Replace with user's actual name -->
+                    <h3 id="rollNumber">Roll No: 1</h3> <!-- Replace with user's actual roll number -->
+                </div>
+            </div>
+    
+            <div class="score">
+                Your Score: <span id="userScore">85</span>/100 <!-- Replace with user's actual score -->
+            </div>
+    
+            <div class="summary">
+                <p>Congratulations, <span id="userName">Harsh</span>! You have successfully completed the exam.</p>
+                <p>Check your results, and feel free to review your answers anytime.</p>
+            </div>
+    
+            <button class="ok-button">OK</button>
+        </div>
+    </div>
+
+
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/para.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/typing.js"></script>
+    <script src="./assets/js/questions/basic.js"></script>
+    <script src="./assets/js/questions/accounts.js"></script>
+    <script src="./assets/js/questions/coding.js"></script>
+    <script src="./assets/js/exam.js"></script>
+
+
+</body>
+
+</html>

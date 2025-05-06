@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Computer Institute - Ludhiana</title>
+  <link rel="shortcut icon" href="./hdlogonew.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .gsap-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .dark body {
+      background-color: #1f2937;
+      color: #f3f4f6;
+    }
+
+    .dark .bg-white {
+      background-color: #374151 !important;
+    }
+
+    .dark .text-blue-600 {
+      color: #93c5fd !important;
+    }
+
+    .dark input,
+    .dark textarea {
+      background-color: #1f2937;
+      color: #f3f4f6;
+      border-color: #4b5563;
+    }
+    /* Footer base */
+.site-footer {
+  background-color: #1e40af; /* Tailwind's bg-blue-700 */
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Footer navigation links */
+.footer-nav {
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #dbeafe; /* lighter blue on hover */
+  text-decoration: underline;
+}
+
+/* Smaller credit text */
+.site-footer .credit {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <button id="theme-toggle" class="p-2 rounded-full focus:outline-none transition-colors duration-300">
+    <i id="theme-icon" class="fas fa-sun text-yellow-500 text-xl"></i>
+  </button>
+  
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">ABC Institute</h1>
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul id="navMenu"
+        class="hidden md:flex space-x-6 font-medium md:items-center md:static absolute bg-white top-16 left-0 w-full md:w-auto md:bg-transparent flex-col md:flex-row">
+        <li><a href="#home" class="block px-4 py-2 hover:text-blue-600">Home</a></li>
+        <li><a href="#courses" class="block px-4 py-2 hover:text-blue-600">Courses</a></li>
+        <li><a href="#about" class="block px-4 py-2 hover:text-blue-600">About</a></li>
+        <li><a href="#gallery" class="block px-4 py-2 hover:text-blue-600">Gallery</a></li>
+        <li><a href="#contact" class="block px-4 py-2 hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header / Hero -->
+  <section id="home" class="pt-28 bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-4 gsap-reveal">Welcome to ABC Computer Institute</h2>
+      <p class="text-lg mb-6 gsap-reveal">Ludhiana's Trusted Destination for Professional Computer Training Since 2010
+      </p>
+      <a href="#contact"
+        class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition gsap-reveal">Join
+        Now</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 gsap-reveal">Our Popular Courses</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition duration-300 gsap-reveal">
+          <img src="https://t4.ftcdn.net/jpg/05/34/92/09/360_F_534920982_Qa6PETZ5l0gX4zKlCyvy4oCgAPrIorz5.jpg"
+            class="rounded mb-4" alt="MS Office">
+          <h4 class="text-xl font-semibold mb-2">MS Office</h4>
+          <p>Master Word, Excel, PowerPoint, Outlook and more with practical assignments and real-world examples.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition duration-300 gsap-reveal">
+          <img src="https://t3.ftcdn.net/jpg/04/74/51/62/360_F_474516297_EQdU9ud37JzlZSNZUwBFGCpqoZeQ2of7.jpg"
+            class="rounded mb-4" alt="Tally">
+          <h4 class="text-xl font-semibold mb-2">Tally with GST</h4>
+          <p>Learn accounting with hands-on practice in Tally ERP9 & Tally Prime along with complete GST modules.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition duration-300 gsap-reveal">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+            class="rounded mb-4" alt="Web Development">
+          <h4 class="text-xl font-semibold mb-2">Web Development</h4>
+          <p>Build websites from scratch using HTML, CSS, JavaScript and React. Includes real projects and live hosting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="gsap-reveal">
+        <h3 class="text-3xl font-bold mb-4">About Our Institute</h3>
+        <p class="mb-4">ABC Computer Institute has been a leader in technical training for over a decade. With expert
+          trainers, updated curriculum, and modern labs, we ensure each student walks out industry-ready.</p>
+        <p class="mb-4">We provide 100% practical training, government-certified courses, and career support. Join us to
+          gain the skills that matter most today.</p>
+      </div>
+      <img src="https://5.imimg.com/data5/HH/QD/MY-69490797/computer-institute.jpg" alt="institute image"
+        class="rounded-xl shadow-lg gsap-reveal" />
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 gsap-reveal">Gallery</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80"
+          class="rounded-lg shadow hover:scale-105 transition gsap-reveal" alt="Classroom" />
+        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
+          class="rounded-lg shadow hover:scale-105 transition gsap-reveal" alt="Lab" />
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
+          class="rounded-lg shadow hover:scale-105 transition gsap-reveal" alt="Students" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 gsap-reveal">Contact Us</h3>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="gsap-reveal">
+          <p class="mb-2"><strong>Address:</strong> 123 Main Road, Model Town, Ludhiana</p>
+          <p class="mb-2"><strong>Phone:</strong> +91 98765 43210</p>
+          <p class="mb-2"><strong>Email:</strong> info@abcinstitute.com</p>
+          <div class="mt-4">
+            <a href="https://wa.me/919876543210" target="_blank"
+              class="inline-block bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">
+              <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <form class="bg-gray-50 p-6 rounded-xl shadow-lg gsap-reveal">
+          <label class="block mb-2 font-medium">Full Name</label>
+          <input type="text" class="w-full p-3 border rounded mb-4" placeholder="Your Name" />
+
+          <label class="block mb-2 font-medium">Phone Number</label>
+          <input type="text" class="w-full p-3 border rounded mb-4" placeholder="Mobile Number" />
+
+          <label class="block mb-2 font-medium">Course Interested In</label>
+          <input type="text" class="w-full p-3 border rounded mb-4" placeholder="Course Name" />
+
+          <label class="block mb-2 font-medium">Message</label>
+          <textarea class="w-full p-3 border rounded mb-4" rows="4" placeholder="Your message..."></textarea>
+
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Send
+            Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="/login">Login</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/exam">Exam</a>
+    </nav>
+    <p>&copy; 2025 ABC Computer Institute, Ludhiana. All rights reserved.</p>
+    <p class="credit">Website by Developer Harsh.</p>
+  </footer>
+  
+
+  <script>
+    // GSAP ScrollReveal
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.gsap-reveal').forEach(el => {
+      gsap.fromTo(el, { opacity: 0, y: 30 }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+
+    // Responsive Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    // Theme Toggle (Dark/Light Mode)
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const userPref = localStorage.getItem('theme');
+
+    const setTheme = (mode) => {
+      if (mode === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        themeIcon.classList.remove('text-yellow-500');
+        themeIcon.classList.add('text-white');
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        themeIcon.classList.remove('text-white');
+        themeIcon.classList.add('text-yellow-500');
+      }
+      localStorage.setItem('theme', mode);
+    };
+
+    if (userPref === 'dark') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+  </script>
+
+
+
+</body>
+
+</html>

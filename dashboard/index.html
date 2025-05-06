@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Student Dashboard</title>
+  <link rel="shortcut icon" href="../hdlogonew.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">🎓</div>
+      <nav class="nav-icons">
+        <i title="Dashboard">🏠</i>
+        <i title="Students">👥</i>
+        <i title="Exams">📝</i>
+        <i title="Reports">📄</i>
+        <i title="Settings">⚙️</i>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <!-- Top bar -->
+      <header class="navbar">
+        <div class="left-group">
+          <button id="sidebarToggle" class="hamburger">☰</button>
+          <h2 class="brand"><span class="primary">Rare</span><span class="dark">tech</span></h2>
+        </div>
+        <nav class="nav-links">
+          <a href="#">Dashboard</a>
+          <a href="#">Students</a>
+          <a href="#">Exams</a>
+          <a href="#">Settings</a>
+        </nav>
+        <button id="mobileMenuToggle" class="hamburger mobile-only">☰</button>
+      </header>
+
+      <!-- Mobile slide-in nav -->
+      <nav id="mobileMenu" class="mobile-menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Students</a>
+        <a href="#">Exams</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <!-- Dashboard content -->
+      <section class="dashboard">
+        <div class="header">
+          <div>
+            <h1>Manage Students & Exams</h1>
+            <p>Quickly manage all student data, exams, and certificates in one place.</p>
+            <div class="stats">
+              <div class="stat-box">
+                <p>Total Exams</p>
+                <h2>3</h2>
+              </div>
+              <div class="stat-box">
+                <p>Total Students</p>
+                <h2>41</h2>
+              </div>
+            </div>
+          </div>
+          <img src="./sdeoc.png" alt="student" />
+        </div>
+
+        <div class="students-section">
+          <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search students..." />
+            <button onclick="searchStudents()">Search</button>
+            <select id="sortSelect" onchange="sortStudents()">
+              <option value="az">Sort A-Z</option>
+              <option value="za">Sort Z-A</option>
+            </select>
+            <button onclick="addStudent()">+ Add Student</button>
+          </div>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sr.</th>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Roll No</th>
+                  <th>Password</th>
+                  <th>DOB</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="studentTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

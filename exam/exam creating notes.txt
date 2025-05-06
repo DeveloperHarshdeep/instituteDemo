@@ -1,0 +1,89 @@
+login
+selecting exam
+checking rules
+Typing of 3 minutes with old exams format
+the logged in user's image, name and rollNo. should be shown in the top-right corner.
+we have three types of exams which are basic, accounts and coding.
+the Exam will be on the basis of ExamType.
+every of these exams will be devided into parts like:- basic subparts will be in comfundamental,word, excel. accounts subparts are comfundamental,word, excel. and accounts and coding subparts are HTML AND CSS. 
+which subpart is selected so it will find that type of questions in examData and then those questions will be shown
+we can skip the question and can do that question in end we can do it or let it free. 
+the answered questions should be shown as green colored circle in the sidepanel and which questions are not answered should also be shown but in yellow colored circle in the panel
+if the time is up or all the questions have been finished the exam should be submitted and if the submit button is clicked it will be submitted successfully
+everyQuestion will have 1 mark
+
+usersdata = [
+    {
+    username: 'someusername',
+    rollNo: 178070,
+    image: './images/laksjdfl.png',
+    password: 'kuchhbhi',
+    dob: 12-12-2005,
+    birthYear: 2005,
+},
+    {
+    username: 'sec',
+    rollNo: 178071,
+    image: './images/asd.png',
+    password: 'kuchhbhi2',
+    dob: 1-1-2005,
+    birthYear: 2005,
+},
+
+]
+
+typingData = [
+    {
+        type: 'basic',
+        paragraph: `CSS: Basic styling is applied to center the content and style the exam cards and buttons. This setup allows the user to select an exam type and navigate to the relevant section for that exam. You can expand this by adding actual exam content inside each section.`
+    },
+    {
+        type: 'accounts',
+        paragraph: `CSS: Basic styling is applied to center the content and style the exam cards and buttons. This setup allows the user to select an exam type and navigate to the relevant section for that exam. You can expand this by adding actual exam content inside each section.`
+    },
+    {
+        type: 'coding',
+        paragraph: `CSS: Basic styling is applied to center the content and style the exam cards and buttons. This setup allows the user to select an exam type and navigate to the relevant section for that exam. You can expand this by adding actual exam content inside each section.`
+    },
+
+]
+
+
+examData = [
+    {
+    question: 'this is a question',
+    answer: 'this is its answer',
+    options: [
+    'this is first', 
+    'this is second',
+    'this is its answer',
+    'this is fourth'
+    ],
+    type: 'basic',
+
+},
+    {
+    question: 'this is sec question',
+    answer: 'this is second',
+    options: [
+    'this is first', 
+    'this is second',
+    'this is its answer',
+    'this is fourth'
+    ],
+    type: 'accounts',
+
+},
+    {
+    question: 'this is third question',
+    answer: 'this is fourth',
+    options: [
+    'this is first', 
+    'this is second',
+    'this is its answer',
+    'this is fourth'
+    ],
+    type: 'coding',
+
+},
+]
